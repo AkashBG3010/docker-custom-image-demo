@@ -1,0 +1,29 @@
+To run in foreground:
+
+nginx -g 'daemon off;'
+
+To run in background:
+
+nginx
+
+Create an Image From a Container
+
+➜  ~ docker commit nginx_base
+
+So if we use the author option on the docker commit command, we can set the value of the author field.
+
+➜  ~ docker commit --author amit.sharma@sentinelone.com nginx_base authored
+
+docker inspect authored | grep Author
+
+Create Commit Messages
+
+~ docker commit --message 'this is a basic nginx image' nginx_base mmm
+
+ ~ docker history mmm
+
+  ~ docker commit --pause=false nginx_base wo_pause
+
+The command to copy index.html to the document root on nginx-base is:
+
+docker cp index.html nginx-base:/usr/share/nginx/html/index.html
