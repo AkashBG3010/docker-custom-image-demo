@@ -27,3 +27,11 @@ Create Commit Messages
 The command to copy index.html to the document root on nginx-base is:
 
 docker cp index.html nginx-base:/usr/share/nginx/html/index.html
+
+The command to chech the metrics/disk usage in docker is: 
+
+docker system df
+
+detailed view: 
+
+docker system df -v
